@@ -112,9 +112,9 @@
       <li class="nav-item active">
         <a class="nav-link active" href="{%url 'news_list'%}"><span style="color:#a6dc7d;">Auto News</span></a>
       </li>
-      <li class="nav-item active">
+      {% comment %} <li class="nav-item active">
         <a class="nav-link active" href="{%url 'about'%}"><span style="color:#a6dc7d;">About Us</span></a>
-      </li>
+      </li> {% endcomment %}
       <li class="nav-item dropdown active">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <span style="color:#a6dc7d;">Categories</span>
@@ -123,7 +123,7 @@
           <a class="dropdown-item" href="{%url 'smartphone_list'%}"><span style="color:blue;">Cars</span></a>
           <a class="dropdown-item" href="{% url 'comparison_list'%}"><span style="color:blue;">Battles</span></a>
           <a class="dropdown-item" href="{% url 'news_list'%}"><span style="color:blue;">Auto News</span></a>
-          <a class="dropdown-item" href="{% url 'about'%}"><span style="color:blue;">About Us</span></a>
+          {% comment %} <a class="dropdown-item" href="{% url 'about'%}"><span style="color:blue;">About Us</span></a> {% endcomment %}
           <div class="dropdown-divider"></div>
           {% if user.is_authenticated %}
           <a class='dropdown-item' href="{% url 'logout'%}">Logout</a>
